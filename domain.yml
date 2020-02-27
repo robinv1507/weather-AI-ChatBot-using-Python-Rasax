@@ -1,0 +1,43 @@
+session_config:
+  session_expiration_time: 0.0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- bot_challenge
+- inform
+- chit_chat
+- inquire
+- thank_you
+- affirm
+entities:
+- location
+slots:
+  location:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey! How can i help  you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am Diya , your digital assistant.
+  - text: I am your digital assistant Diya.
+  utter_idontknow:
+  - text: Sorry , I am  not able to understand what your saying . Please try again.
+  utter_ask_location:
+  - text: please specify the location
+  - text: In what location ?
+  utter_default:
+  - text: Sorry ,I didn't get you. Please try again !
+  utter_thank_you:
+  - text: you are welcome !
+actions:
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_idontknow
+- action_weather
+- utter_ask_location
+- utter_default
+- utter_thank_you
